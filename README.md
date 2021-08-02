@@ -6,24 +6,24 @@
 
 ## The Team
 ### Product Owner
-Gabriel Marquez
+- Gabriel Marquez
 [@GabbyNEW](https://github.com/GabbyNEW)
 
 ### Scrum Master 
-Jericho Dizon
+- Jericho Dizon
 [@JrchDzn119 ](https://github.com/JrchDzn119)
 
 ### Designer
-Jose Guerrero
+- Jose Guerrero
 [@guerrero10jose](https://github.com/guerrero10jose)
 
 ### Developers
-Casie Aviles
+- Casie Aviles
 [@casie-aviles](https://github.com/casie-aviles) <br>
-Isaiah Majarreis
+- Isaiah Majarreis
 [@isaiahmajarreis](https://github.com/isaiahmajarreis)
 
 ### QA
-Immac Roldan
+- Immac Roldan
 [@ImmacSR](https://github.com/ImmacSR) <br>
-John Anthony Chan
+- John Anthony Chan
