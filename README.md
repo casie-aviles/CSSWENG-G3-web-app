@@ -25,6 +25,5 @@ Isaiah Majarreis
 
 ### QA
 Immac Roldan
-[@ImmacSR](https://github.com/ImmacSR)
-
+[@ImmacSR](https://github.com/ImmacSR) <br>
 John Anthony Chan
