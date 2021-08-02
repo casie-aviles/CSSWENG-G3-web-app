@@ -5,5 +5,5 @@
 ## Getting Started
 
 ## Authors
-@casie-aviles
-@isaiahmajarreis 
+[@casie-aviles](https://github.com/casie-aviles)
+[@isaiahmajarreis](https://github.com/isaiahmajarreis)
