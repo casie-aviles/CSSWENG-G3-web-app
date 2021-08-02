@@ -19,7 +19,7 @@ Jose Guerrero
 
 ### Developers
 Casie Aviles
-[@casie-aviles](https://github.com/casie-aviles)
+[@casie-aviles](https://github.com/casie-aviles) <br>
 Isaiah Majarreis
 [@isaiahmajarreis](https://github.com/isaiahmajarreis)
 
