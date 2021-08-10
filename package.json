@@ -1,0 +1,24 @@
+{
+  "name": "cssweng-g3-web-app",
+  "version": "1.0.0",
+  "description": "- Gabriel Marquez\r [@GabbyNEW](https://github.com/GabbyNEW)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/casie-aviles/CSSWENG-G3-web-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/casie-aviles/CSSWENG-G3-web-app/issues"
+  },
+  "homepage": "https://github.com/casie-aviles/CSSWENG-G3-web-app#readme",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "hbs": "^4.1.2"
+  }
+}
