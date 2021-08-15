@@ -81,7 +81,7 @@ h1 span {
 	margin-bottom: 30px;
 }
 
-.content-right form input{
+.content-right form input[type=text]{
 	width: 100%;
 	height: 50px;
 	font-size: 17px;
@@ -91,14 +91,35 @@ h1 span {
 	margin-bottom: 15px;
 }
 
-.content-right form input:hover{
+.content-right form input[type=password]{
+	width: 100%;
+	height: 50px;
+	font-size: 17px;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	padding: 0 15px;
+	margin-bottom: 15px;
+}
+
+.content-right form input[type=text]:hover{
 	border: 2px solid #1c1e21;
 	background: #f0f2f5;
 }
 
-.btn{
+.content-right form input[type=password]:hover{
+	border: 2px solid #1c1e21;
+	background: #f0f2f5;
+}
+
+option span{
+	color: red;
+}
+
+.login input{
+	display: block;
+	margin-top: 10px;
 	font-size: 18px;
-	background: #C7493A;
+	background-color: #C7493A;
 	height: 50px;
 	color: #fff;
 	line-height: 50px;
@@ -109,29 +130,14 @@ h1 span {
 	height: 40px;
 	text-transform: capitalize;
 	line-height: 40px;
+	border-style: none;
 }
 
-select{
-	width: 100%;
-	height: 50px;
-	font-size: 17px;
-	border: 1px solid #ddd;
-	border-radius: 5px;
-	padding: 0 15px;
-	margin-bottom: 15px;
-	/* color: gray; */
-}
-
-option span{
-	color: red;
-}
-
-.login{
-	margin-top: 10px;
-}
-
-.login a{
-	display: block;
+.login input:hover{
+	cursor: pointer;
+	background-color: #fc5f4c;
+	height: 41px;
+	width:  121px;
 }
 
 .signup p{

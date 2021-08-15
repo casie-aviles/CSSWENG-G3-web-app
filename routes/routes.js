@@ -25,6 +25,7 @@ app.get('/', controller.getIndex);
 app.get('/signup', signupController.getSignUp);
 app.post('/signup', signupController.postSignUp);
 app.get('/login', loginController.getLogIn);
+app.post('/login', loginController.postLogIn);
 app.get('/success', successController.getSuccess);
 app.get('/collection', collectionController.getCollection);
 
