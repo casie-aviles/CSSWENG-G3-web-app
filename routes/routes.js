@@ -5,8 +5,13 @@ const express = require('express');
 // import module `controller` from `../controllers/controller.js`
 const controller = require('../controllers/controller.js');
 
+const signupController = require('../controllers/signupController.js');
+
 // import module `loginController` from `../controllers/loginController.js`
 const loginController = require('../controllers/loginController.js');
+
+// import module `successController` from `../controllers/successController.js`
+const successController = require('../controllers/successController.js');
 
 // import module `collectionController` from `../controllers/collectionController.js`
 const collectionController = require('../controllers/collectionController.js');
@@ -17,7 +22,10 @@ const collectionController = require('../controllers/collectionController.js');
 const app = express();
 
 app.get('/', controller.getIndex);
+app.get('/signup', signupController.getSignUp);
+app.post('/signup', signupController.postSignUp);
 app.get('/login', loginController.getLogIn);
+app.get('/success', successController.getSuccess);
 app.get('/collection', collectionController.getCollection);
 
 module.exports = app;

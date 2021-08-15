@@ -8,7 +8,7 @@ const hbs = require('hbs');
 const routes = require('./routes/routes.js');
 
 // import module `database` from `./model/db.js`
-// const db = require('./models/db.js');
+const db = require('./models/db.js');
 
 const app = express();
 const port = 9090;
@@ -36,7 +36,7 @@ app.use('/', routes);
 }); */
 
 // connects to the database
-// db.connect();
+db.connect();
 
 // binds the server to a specific port
 app.listen(port, function () {
