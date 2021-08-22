@@ -15,10 +15,8 @@ const signupController = {
         as defined in `../routes/routes.js`
     */
     getSignUp: function (req, res) {
-
-        // render `../views/index.hbs`
         res.render('signup');
-        console.log("getSignUp check");
+        // console.log("signup.hbs successfully rendered");
     },
 
     /*
@@ -50,8 +48,8 @@ const signupController = {
             accType: accType
         }
 
-        console.log("postSignUp check");
-        console.log(fName + lName);
+        // console.log("sign up successful");
+        // console.log("sign up details saved to database successfully");
 
         /*
             calls the function insertOne()
