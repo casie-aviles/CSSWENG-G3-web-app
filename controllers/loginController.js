@@ -18,7 +18,7 @@ const loginController = {
         db.findOne(User, {email: email, pw: pw}, '', function (result) {
             console.log(result);
             if(result != null) {
-                if (result.accType != 'NONE') {
+                if (result.accType == 'ADMIN') {
                     var user = {
                         fName: result.fName,
                         lName: result.lName,
@@ -26,7 +26,7 @@ const loginController = {
                         email: result.email,
                         accType: result.accType
                     }
-                    res.redirect('/success?fName=' + user["fName"] +'&lName=' + 
+                    res.redirect('/home?fName=' + user["fName"] +'&lName=' + 
                                     user["lName"] + '&dept=' + user["dept"] + 
                                     '&email=' + user["email"] + '&accType=' + 
                                     user["accType"]);

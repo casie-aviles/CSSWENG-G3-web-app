@@ -13,6 +13,9 @@ const loginController = require('../controllers/loginController.js');
 // import module `successController` from `../controllers/successController.js`
 const successController = require('../controllers/successController.js');
 
+// import module `homeController` from `../controllers/homeController.js`
+const homeController = require('../controllers/homeController.js');
+
 // import module `collectionController` from `../controllers/collectionController.js`
 const collectionController = require('../controllers/collectionController.js');
 
@@ -27,6 +30,7 @@ app.post('/signup', signupController.postSignUp);
 app.get('/login', loginController.getLogIn);
 app.post('/login', loginController.postLogIn);
 app.get('/success', successController.getSuccess);
+app.get('/home', homeController.getHome);
 app.get('/collection', collectionController.getCollection);
 
 module.exports = app;

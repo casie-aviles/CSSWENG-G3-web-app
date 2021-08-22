@@ -1,7 +1,7 @@
 
-const collectionController = {
+const homeController = {
 
-    getCollection: function (req, res) {
+    getHome: function (req, res) {
 
         var details = {
             fName: req.query.fName,
@@ -11,9 +11,9 @@ const collectionController = {
             accType: req.query.accType
         };
 
-        res.render('collection', details);
+        res.render('home', details);
     }
 
 }
 
-module.exports = collectionController;
+module.exports = homeController;
