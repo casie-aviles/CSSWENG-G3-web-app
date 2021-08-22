@@ -18,13 +18,23 @@ const loginController = {
         db.findOne(User, {email: email, pw: pw}, '', function (result) {
             console.log(result);
             if(result != null) {
-                var user = {
-                    fName: result.fName,
-                    lName: result.lName,
-                    dept: result.dept,
-                    email: result.email
+                if (result.accType != 'NONE') {
+                    var user = {
+                        fName: result.fName,
+                        lName: result.lName,
+                        dept: result.dept,
+                        email: result.email,
+                        accType: result.accType
+                    }
+                    res.redirect('/success?fName=' + user["fName"] +'&lName=' + 
+                                    user["lName"] + '&dept=' + user["dept"] + 
+                                    '&email=' + user["email"] + '&accType=' + 
+                                    user["accType"]);
                 }
-                res.redirect('/success?fName=' + user["fName"] +'&lName=' + user["lName"] + '&dept=' + user["dept"] + '&email=' + email);
+                else {
+                    console.log("User is not verified!");
+                    res.redirect('/');
+                }
             }
             else {
                 console.log("User does not exist!");

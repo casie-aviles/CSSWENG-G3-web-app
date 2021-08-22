@@ -23,6 +23,11 @@ var UserSchema = new mongoose.Schema({
     pw: {
         type: String,
         required: true
+    },
+    accType: {
+        type: String,
+        enum: ['NONE', 'REG', 'ADMIN', 'COO'],
+        required: true
     }
 });
 

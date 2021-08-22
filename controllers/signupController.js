@@ -39,13 +39,15 @@ const signupController = {
         var dept = req.body.dept;
         var email = req.body.email;
         var pw = req.body.pw;
+        var accType = 'NONE'; /* is set to 'NONE' by default until admin verifies it */
 
         var user = {
             fName: fName,
             lName: lName,
             dept: dept,
             email: email,
-            pw: pw
+            pw: pw,
+            accType: accType
         }
 
         console.log("postSignUp check");
@@ -66,7 +68,9 @@ const signupController = {
                     which calls getSuccess() method
                     defined in `./successController.js`
                 */
-                res.redirect('/success?fName=' + fName +'&lName=' + lName + '&dept=' + dept + '&email=' + email);
+                res.redirect('/success?fName=' + fName +'&lName=' + lName + 
+                                '&dept=' + dept + '&email=' + email + 
+                                '&accType=' + accType);
             }
         });
     }

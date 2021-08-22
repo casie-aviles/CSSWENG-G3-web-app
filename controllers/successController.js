@@ -21,7 +21,8 @@ const successController = {
             fName: req.query.fName,
             lName: req.query.lName,
             dept: req.query.dept,
-            email: req.query.email
+            email: req.query.email,
+            accType: req.query.accType
         };
 
         // render `../views/success.hbs`
