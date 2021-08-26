@@ -52,7 +52,7 @@ body{
 }
 
 h1 span {
-	color: #689775;
+	color: #97bcb0;
 }
 
 .content-left h2{
@@ -72,7 +72,7 @@ h1 span {
 .content-right form{
 	width: 400px;
 	height: 460px;
-	background-color: #0f0f0f;
+	background-color: #171717;
 	border-radius: 5px;
 	padding: 30px;
 	-webkit-box-shadow: -1px -1px 8px -1px rgba(0,0,0,0.52);
