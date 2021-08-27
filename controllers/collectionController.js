@@ -1,3 +1,6 @@
+const db = require('../models/db.js');
+
+const User = require('../models/UserModel.js');
 
 const collectionController = {
 
@@ -11,7 +14,14 @@ const collectionController = {
             accType: req.query.accType
         };
 
-        res.render('collection', details);
+        // new accounts
+        db.findMany(User, {accType: 'NONE'}, '', function (result) {
+            // console.log(result.length);
+            newAccs = result;
+
+            var send = {details, newAccs};
+            res.render('collection', send);
+        });
     }
 
 }

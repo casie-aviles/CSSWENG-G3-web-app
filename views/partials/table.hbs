@@ -58,66 +58,24 @@
 
 <body>
 
-    <h1>Collection Name</h1>
+    <h1>{{tableName}}</h1>
     <hr>
 
     <table>
         <tr id="header">
             <th>First name</th>
             <th>Last name</th>
-            <th>Age</th>
-            <th>Country</th>
-            <th>Likes</th>
+            <th>Department</th>
+            <th>Account Type</th>
         </tr>
+        {{#each newAccs}}
         <tr>
-            <td>Juan </td>
-            <td>dela Cruz </td>
-            <td>25 </td>
-            <td>PHL </td>
-            <td>Food </td>
-
+            <td>{{fName}}</td>
+            <td>{{lName}} </td>
+            <td>{{dept}}</td>
+            <td>{{accType}}</td>
         </tr>
-        <tr>
-            <td>Daniela </td>
-            <td>Melchior </td>
-            <td>24 </td>
-            <td>PRT </td>
-            <td>Rats </td>
-
-        </tr>
-        <tr>
-            <td>Mao </td>
-            <td>Zedong </td>
-            <td>26 </td>
-            <td>CHN </td>
-            <td>Revolution </td>
-
-        </tr>
-        <tr>
-            <td>Tommy </td>
-            <td>Wiseau </td>
-            <td>100 </td>
-            <td>USA </td>
-            <td>Mark </td>
-
-        </tr>
-        <tr>
-            <td>Jonathan </td>
-            <td>Manuel </td>
-            <td>20 </td>
-            <td>PHL </td>
-            <td>Bicycles </td>
-
-        </tr>
-        <tr>
-            <td>Olivia </td>
-            <td>Hye </td>
-            <td>20 </td>
-            <td>KOR </td>
-            <td>Watermelons </td>
-
-        </tr>
-
+        {{/each}}
     </table>
 
 </body>

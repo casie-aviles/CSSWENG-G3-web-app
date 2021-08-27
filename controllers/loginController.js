@@ -19,6 +19,8 @@ const loginController = {
             console.log(result);
             if(result != null) {
                 if (result.accType == 'ADMIN') {
+
+                    // current user
                     var user = {
                         fName: result.fName,
                         lName: result.lName,
@@ -26,6 +28,7 @@ const loginController = {
                         email: result.email,
                         accType: result.accType
                     }
+
                     res.redirect('/home?fName=' + user["fName"] +'&lName=' + 
                                     user["lName"] + '&dept=' + user["dept"] + 
                                     '&email=' + user["email"] + '&accType=' + 
