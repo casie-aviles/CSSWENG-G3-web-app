@@ -32,5 +32,6 @@ app.post('/login', loginController.postLogIn);
 app.get('/success', successController.getSuccess);
 app.get('/home', homeController.getHome);
 app.get('/collection', collectionController.getCollection);
+app.post('/collection', collectionController.postCollection);
 
 module.exports = app;

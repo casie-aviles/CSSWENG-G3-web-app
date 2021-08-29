@@ -43,7 +43,7 @@
         padding: 10px 0px;
     }
     
-    #entries:hover {
+    .entries:hover {
         background-color: #f5f5f5;
         /* transform: scale(1.02); */
         box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2), -1px -1px 8px rgba(0, 0, 0, 0.2);
@@ -69,13 +69,25 @@
         visibility: hidden;
         box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2), -1px -1px 8px rgba(0, 0, 0, 0.2);
         border-radius: 10px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .result {
+        color: white;
     }
 </style>
 
 <body>
 
-    <form id="popup" method="post">
-        <input type="submit" action="/collection?fName={{details.fName}}&lName={{details.lName}}&dept={{details.dept}}&email={{details.email}}&accType={{details.accType}}"value="Verify"></input>
+    <form id="popup" method="post" action="/collection?fName={{details.fName}}&lName={{details.lName}}&dept={{details.dept}}&email={{details.email}}&accType={{details.accType}}">
+        <p class="result" id="resfName"></p>
+        <p class="result" id="reslName"></p>
+        <p class="result" id="resdept"></p>
+        <p class="result" id="resemail"></p>
+        <p class="result" id="resaccType"></p>
+        <input type="submit" id="submit" value="Verify">
+        </input>
     </form>
 
     <h1>{{tableName}}</h1>
@@ -86,14 +98,16 @@
             <th>First name</th>
             <th>Last name</th>
             <th>Department</th>
+            <th>Email</th>
             <th>Account Type</th>
         </tr>
         {{#each newAccs}}
-        <tr id="entries">
-            <td>{{fName}}</td>
-            <td>{{lName}} </td>
-            <td>{{dept}}</td>
-            <td>{{accType}}</td>
+        <tr class="entries">
+            <td class="fName">{{fName}}</td>
+            <td class="lName">{{lName}} </td>
+            <td class="dept">{{dept}}</td>
+            <td class="email">{{email}}</td>
+            <td class="accType">{{accType}}</td>
         </tr>
         {{/each}}
     </table>
