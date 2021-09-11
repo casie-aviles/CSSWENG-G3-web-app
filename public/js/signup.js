@@ -1,9 +1,9 @@
 $(document).ready(function () {
-    alert("Loaded signup.js");
+    // alert("Loaded signup.js");
 
 	$("#submit").click(function(){
 		
-		//Get values
+		// Get values
 		var fName = $('#fName').val();
         var lName = $('#lName').val();
         var email = $('#email').val();
@@ -48,16 +48,16 @@ $(document).ready(function () {
 		}
 		
 		
-		//Do this if there are no errors
+		// Do this if there are no errors
 		if(!error)
 		{
             alert("Account succesfully registered!");
             alert("NOTE: Your account's verification is pending. You can not log-in until the administrator has verified your account.")
 
-            $('#fName').val("");
+            /*$('#fName').val("");
             $('#lName').val("");
             $('#email').val("");
-            $('#pw').val("");
+            $('#pw').val("");*/
 		}
 		
 	});

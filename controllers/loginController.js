@@ -17,21 +17,22 @@ const loginController = {
         var email = req.body.email;
         var pw = req.body.pw;
 
+
         // check if user's account exists
         db.findOne(User, {email: email, pw: pw}, '', function (result) {
             console.log(result);
 
-            // current user's details
-            var user = {
-                fName: result.fName,
-                lName: result.lName,
-                dept: result.dept,
-                email: result.email,
-                accType: result.accType
-            }
-
             // if user trying to log in exists
             if(result != null) {
+
+                // current user's details
+                var user = {
+                    fName: result.fName,
+                    lName: result.lName,
+                    dept: result.dept,
+                    email: result.email,
+                    accType: result.accType
+                }
 
                 // check if their account is unverified
                 if (result.accType == 'NONE') {
@@ -49,7 +50,7 @@ const loginController = {
                 /* TODO: Add corresponding `else-ifs` for the other account types e.g. REG, COO */
                 // else, their account is at least verified
                 else {
-                    res.redirect('/success?fName=' + user["fName"] +'&lName=' + 
+                    res.redirect('/home?fName=' + user["fName"] +'&lName=' + 
                                     user["lName"] + '&dept=' + user["dept"] + 
                                     '&email=' + user["email"] + '&accType=' + 
                                     user["accType"]);

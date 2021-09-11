@@ -16,8 +16,11 @@ const successController = require('../controllers/successController.js');
 // import module `homeController` from `../controllers/homeController.js`
 const homeController = require('../controllers/homeController.js');
 
-// import module `collectionController` from `../controllers/collectionController.js`
-const collectionController = require('../controllers/collectionController.js');
+// import module `newAccountsController` from `../controllers/newAccountsController.js`
+const newAccountsController = require('../controllers/newAccountsController.js');
+
+// import module `allAccountsController` from `../controllers/allAccountsController.js`
+const allAccountsController = require('../controllers/allAccountsController.js');
 
 // import module `validation` from `../helpers/validation.js`
 // const validation = require('../helpers/validation.js');
@@ -31,7 +34,8 @@ app.get('/login', loginController.getLogIn);
 app.post('/login', loginController.postLogIn);
 app.get('/success', successController.getSuccess);
 app.get('/home', homeController.getHome);
-app.get('/collection', collectionController.getCollection);
-app.post('/collection', collectionController.postCollection);
+app.get('/newAccounts', newAccountsController.getNewAccounts);
+app.post('/newAccounts', newAccountsController.postNewAccount);
+app.get('/allAccounts', allAccountsController.getAllAccounts);
 
 module.exports = app;

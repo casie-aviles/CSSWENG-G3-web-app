@@ -19,6 +19,14 @@ app.set('view engine', 'hbs');
 // sets `/views/partials` as folder containing partial hbs files
 hbs.registerPartials(__dirname + '/views/partials');
 
+// handlebars helper to check if two parameters are equal
+hbs.registerHelper('if_eq', function(a, b, opts) {
+    if(a == b)
+        return opts.fn(this);
+    else
+        return opts.inverse(this);
+});
+
 // parses incoming requests with urlencoded payloads
 app.use(express.urlencoded({extended: true}));
 

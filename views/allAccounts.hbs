@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Glassram | New Accounts</title>
+    <title>Glassram | All Accounts</title>
     <link rel = "stylesheet" type="text/css" href = "css/collection.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
@@ -34,7 +34,8 @@
       </div>
       <div class="mobile_nav_items">
         <a href="/home?fName={{details.fName}}&lName={{details.lName}}&dept={{details.dept}}&email={{details.email}}&accType={{details.accType}}"><i class="fas fa-desktop"></i><span>Dashboard</span></a>
-        <a href="/collection?fName={{details.fName}}&lName={{details.lName}}&dept={{details.dept}}&email={{details.email}}&accType={{details.accType}}"><i class="fas fa-table"></i><span>Components</span>
+        <a href="/newAccounts?fName={{details.fName}}&lName={{details.lName}}&dept={{details.dept}}&email={{details.email}}&accType={{details.accType}}"><i class="fas fa-table"></i><span>New Accounts</span>
+        <a href="/allAccounts?fName={{details.fName}}&lName={{details.lName}}&dept={{details.dept}}&email={{details.email}}&accType={{details.accType}}"><i class="fas fa-table"></i><span>All Accounts</span>
         <!--<a href=""><i class="fas fa-cogs"></i><span>Components</span></a>
         <a href=""><i class="fas fa-table"></i><span>Tables</span></a>
         <a href=""><i class="fas fa-th"></i><span>Forms</span></a>-->
@@ -50,7 +51,8 @@
         <h4>{{details.fName}} {{details.lName}}</h4>
       </div>
       <a href="/home?fName={{details.fName}}&lName={{details.lName}}&dept={{details.dept}}&email={{details.email}}&accType={{details.accType}}"><i class="fas fa-desktop"></i><span>Dashboard</span></a>
-      <a href="/collection?fName={{details.fName}}&lName={{details.lName}}&dept={{details.dept}}&email={{details.email}}&accType={{details.accType}}"><i class="fas fa-table"></i><span>New Accounts</span></a>
+      <a href="/newAccounts?fName={{details.fName}}&lName={{details.lName}}&dept={{details.dept}}&email={{details.email}}&accType={{details.accType}}"><i class="fas fa-table"></i><span>New Accounts</span></a>
+      <a href="/allAccounts?fName={{details.fName}}&lName={{details.lName}}&dept={{details.dept}}&email={{details.email}}&accType={{details.accType}}"><i class="fas fa-table"></i><span>All Accounts</span></a>
       <!--<a href=""><i class="fas fa-cogs"></i><span>New Accounts</span></a>
       <a href=""><i class="fas fa-table"></i><span>Collection Name</span></a>
       <a href=""><i class="fas fa-th"></i><span>Collection Name</span></a>-->
@@ -60,7 +62,7 @@
     <!--sidebar end-->
 
     <div class="content">
-      {{> table tableName = 'New Accounts'}}
+      {{> table tableName = 'All Accounts'}}
     </div>
 
     <script type="text/javascript">

@@ -48,9 +48,6 @@ const signupController = {
             accType: accType
         }
 
-        // console.log("sign up successful");
-        // console.log("sign up details saved to database successfully");
-
         /*
             calls the function insertOne()
             defined in the `database` object in `../models/db.js`
@@ -66,6 +63,8 @@ const signupController = {
                     which calls getSuccess() method
                     defined in `./successController.js`
                 */
+                // console.log("sign up successful");
+                // console.log("sign up details saved to database successfully");
                 res.redirect('/success?fName=' + fName +'&lName=' + lName + 
                                 '&dept=' + dept + '&email=' + email + 
                                 '&accType=' + accType);

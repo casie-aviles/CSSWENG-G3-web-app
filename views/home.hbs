@@ -35,10 +35,13 @@
       </div>
       <div class="mobile_nav_items">
         <a href="/home?fName={{fName}}&lName={{lName}}&dept={{dept}}&email={{email}}&accType={{accType}}"><i class="fas fa-desktop"></i><span>Dashboard</span></a>
-        <a href="/collection?fName={{fName}}&lName={{lName}}&dept={{dept}}&email={{email}}&accType={{accType}}"><i class="fas fa-table"></i><span>Components</span></a>
-        <!--<a href=""><i class="fas fa-cogs"></i><span>Components</span></a>
-        <a href=""><i class="fas fa-table"></i><span>Tables</span></a>
-        <a href=""><i class="fas fa-th"></i><span>Forms</span></a>-->
+        {{#if_eq accType "ADMIN"}}
+          <a href="/newAccounts?fName={{fName}}&lName={{lName}}&dept={{dept}}&email={{email}}&accType={{accType}}"><i class="fas fa-table"></i><span>New Accounts</span></a>
+          <a href="/allAccounts?fName={{fName}}&lName={{lName}}&dept={{dept}}&email={{email}}&accType={{accType}}"><i class="fas fa-table"></i><span>All Accounts</span></a>
+          <!--<a href=""><i class="fas fa-cogs"></i><span>Components</span></a>
+          <a href=""><i class="fas fa-table"></i><span>Tables</span></a>
+          <a href=""><i class="fas fa-th"></i><span>Forms</span></a>-->
+        {{/if_eq}}
         <a href=""><i class="fas fa-info-circle"></i><span>About</span></a>
         <a href=""><i class="fas fa-sliders-h"></i><span>Settings</span></a>
       </div>
@@ -51,10 +54,13 @@
         <h4>{{fName}} {{lName}}</h4>
       </div>
       <a href="/home?fName={{fName}}&lName={{lName}}&dept={{dept}}&email={{email}}&accType={{accType}}"><i class="fas fa-desktop"></i><span>Dashboard</span></a>
-      <a href="/collection?fName={{fName}}&lName={{lName}}&dept={{dept}}&email={{email}}&accType={{accType}}"><i class="fas fa-table"></i><span>New Accounts</span></a>
-      <!--<a href=""><i class="fas fa-cogs"></i><span>Collection Name</span></a>
-      <a href=""><i class="fas fa-table"></i><span>Collection Name</span></a>
-      <a href=""><i class="fas fa-th"></i><span>Collection Name</span></a>-->
+      {{#if_eq accType "ADMIN"}}
+        <a href="/newAccounts?fName={{fName}}&lName={{lName}}&dept={{dept}}&email={{email}}&accType={{accType}}"><i class="fas fa-table"></i><span>New Accounts</span></a>
+        <a href="/allAccounts?fName={{fName}}&lName={{lName}}&dept={{dept}}&email={{email}}&accType={{accType}}"><i class="fas fa-table"></i><span>All Accounts</span></a>
+        <!--<a href=""><i class="fas fa-cogs"></i><span>Collection Name</span></a>
+        <a href=""><i class="fas fa-table"></i><span>Collection Name</span></a>
+        <a href=""><i class="fas fa-th"></i><span>Collection Name</span></a>-->
+      {{/if_eq}}
       <a href=""><i class="fas fa-info-circle"></i><span>About</span></a>
       <a href=""><i class="fas fa-sliders-h"></i><span>Settings</span></a>
     </div>

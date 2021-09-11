@@ -2,10 +2,10 @@ const db = require('../models/db.js');
 
 const User = require('../models/UserModel.js');
 
-const collectionController = {
+const newAccountsController = {
 
     // gets all new accounts and loads them into the page
-    getCollection: function (req, res) {
+    getNewAccounts: function (req, res) {
 
         var details = {
             fName: req.query.fName,
@@ -22,12 +22,12 @@ const collectionController = {
             newAccs = result;
 
             var send = {details, newAccs};
-            res.render('collection', send);
+            res.render('newAccounts', send);
         });
     },
 
     // logic for when the admin verifies an account
-    postCollection: function (req, res) {
+    postNewAccount: function (req, res) {
 
         // get details of the currently logged-in admin
         var user = {
@@ -55,7 +55,7 @@ const collectionController = {
         }); 
 
         // once successful, redirect back to the new accounts view page
-        res.redirect('/collection?fName=' + user["fName"] +'&lName=' + 
+        res.redirect('/newAccounts?fName=' + user["fName"] +'&lName=' + 
                                     user["lName"] + '&dept=' + user["dept"] + 
                                     '&email=' + user["email"] + '&accType=' + 
                                     user["accType"]);
@@ -63,4 +63,4 @@ const collectionController = {
 
 }
 
-module.exports = collectionController;
+module.exports = newAccountsController;
