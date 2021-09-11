@@ -50,7 +50,7 @@ const newAccountsController = {
         // look through the database and verify the target user
         db.updateOne(User, {email: target.email, accType: 'NONE'}, {
             $set: {
-                accType: 'REG'
+                accType: target.accType
             }
         }); 
 

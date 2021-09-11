@@ -12,16 +12,15 @@ $(document).ready(function(){
             $('#reslName').text($(this).closest("tr").find(".lName").text());
             $('#resdept').text($(this).closest("tr").find(".dept").text());
             $('#resemail').text($(this).closest("tr").find(".email").text());
-            $('#resaccType').text($(this).closest("tr").find(".accType").text());
+            // $('#resaccType').text($(this).closest("tr").find(".accType").text());
     
             // then display the pop up menu
             $('#popup').css("visibility", "visible");
     
         });
     
-        /* TODO: Transfer this function to an actual close button to be added later*/
         // hide pop up menu when it's clicked
-        $('#popup').click(function(){
+        $('#close_btn').click(function(){
             $('#popup').css("visibility", "hidden");
         });
     
@@ -34,7 +33,7 @@ $(document).ready(function(){
             var lName = $('#reslName').text();
             var dept = $('#resdept').text();
             var email = $('#resemail').text();
-            var accType = $('#resaccType').text();
+            var accType = $('#resaccType').val();
     
             // append the account's details onto the existing http query
             val += "&resfName=" + fName + "&reslName=" + lName  + "&resdept=" + dept + "&resemail=" + email + "&resaccType=" + accType;

@@ -73,6 +73,26 @@
         padding-right: 30px;
     }
 
+    #resaccType {
+        width: 100%;
+        height: 50px;
+        font-size: 17px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        padding: 0 15px;
+        margin-bottom: 15px;
+    }
+
+    #close_btn {
+        text-align: center;
+        width: 20px;
+    }
+
+    #close_btn:hover {
+        cursor: pointer;
+        background-color: crimson;
+    }
+
     .result {
         color: white;
     }
@@ -80,12 +100,18 @@
 
 <body>
 
-    <form id="popup" method="post" action="/collection?fName={{details.fName}}&lName={{details.lName}}&dept={{details.dept}}&email={{details.email}}&accType={{details.accType}}">
+    <form id="popup" method="post" action="/newAccounts?fName={{details.fName}}&lName={{details.lName}}&dept={{details.dept}}&email={{details.email}}&accType={{details.accType}}">
+        <p class="result" id="close_btn">x</p>
         <p class="result" id="resfName"></p>
         <p class="result" id="reslName"></p>
         <p class="result" id="resdept"></p>
         <p class="result" id="resemail"></p>
-        <p class="result" id="resaccType"></p>
+        <!--<p class="result" id="resaccType"></p>-->
+        <select name="resaccType" id="resaccType">
+			<option value="NONE" selected>NONE</option>
+			<option value="REG">REG</option>
+			<option value="ADMIN">ADMIN</option>
+		</select>
         <input type="submit" id="submit" value="Verify">
         </input>
     </form>
