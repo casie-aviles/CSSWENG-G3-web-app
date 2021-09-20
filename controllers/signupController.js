@@ -65,9 +65,10 @@ const signupController = {
                 */
                 // console.log("sign up successful");
                 // console.log("sign up details saved to database successfully");
-                res.redirect('/success?fName=' + fName +'&lName=' + lName + 
+                /*res.redirect('/success?fName=' + fName +'&lName=' + lName + 
                                 '&dept=' + dept + '&email=' + email + 
-                                '&accType=' + accType);
+                                '&accType=' + accType);*/
+                res.redirect('/signup');
             }
         });
     }

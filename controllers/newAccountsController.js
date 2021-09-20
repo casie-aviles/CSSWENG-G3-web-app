@@ -59,6 +59,36 @@ const newAccountsController = {
                                     user["lName"] + '&dept=' + user["dept"] + 
                                     '&email=' + user["email"] + '&accType=' + 
                                     user["accType"]);
+    },
+
+    deleteAccount: function(req, res) {
+
+        // get details of the currently logged-in admin
+        var user = {
+            fName: req.query.fName,
+            lName: req.query.lName,
+            dept: req.query.dept,
+            email: req.query.email,
+            accType: req.query.accType
+        };
+
+        // get details of the target user to be deleted
+        var target = {
+            fName: req.query.resfName,
+            lName: req.query.reslName,
+            dept: req.query.resdept,
+            email: req.query.resemail,
+            accType: req.query.resaccType
+        }
+
+        // look through the database and verify the target user
+        db.deleteOne(User, {email: target.email, accType: 'NONE'}); 
+
+        // once successful, redirect back to the new accounts view page
+        res.redirect('/newAccounts?fName=' + user["fName"] +'&lName=' + 
+                                    user["lName"] + '&dept=' + user["dept"] + 
+                                    '&email=' + user["email"] + '&accType=' + 
+                                    user["accType"]);
     }
 
 }

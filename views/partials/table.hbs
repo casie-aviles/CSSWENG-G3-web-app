@@ -59,13 +59,14 @@
     #popup {
         position:absolute;
         width: 400px;
-        height: 450px;
+        height: 500px;
         background-color: #22242A;
         top:0;
         bottom: 0;
         left: 0;
         right: 0;
         margin: auto;
+        margin-top: 100px;
         visibility: hidden;
         box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2), -1px -1px 8px rgba(0, 0, 0, 0.2);
         border-radius: 10px;
@@ -84,35 +85,64 @@
     }
 
     #close_btn {
-        text-align: center;
-        width: 20px;
+        text-align: right;
     }
 
     #close_btn:hover {
         cursor: pointer;
-        background-color: crimson;
     }
 
     .result {
         color: white;
     }
+
+    .field_name {
+        font-weight: bold;
+    }
+
+    input {
+        font-size: 18px;
+        background-color: #C7493A;
+        height: 50px;
+        color: #fff;
+        line-height: 50px;
+        border-radius: 5px;
+        width: 120px;
+        height: 40px;
+        text-transform: capitalize;
+        line-height: 40px;
+        border-style: none;
+        cursor: pointer;
+        margin-right: 5px;
+    }
+
 </style>
 
 <body>
 
     <form id="popup" method="post" action="/newAccounts?fName={{details.fName}}&lName={{details.lName}}&dept={{details.dept}}&email={{details.email}}&accType={{details.accType}}">
         <p class="result" id="close_btn">x</p>
+
+        <p class="result field_name">First Name:</p>
         <p class="result" id="resfName"></p>
+
+        <p class="result field_name">Last Name:</p>
         <p class="result" id="reslName"></p>
+
+        <p class="result field_name">Department:</p>
         <p class="result" id="resdept"></p>
+
+        <p class="result field_name">Email:</p>
         <p class="result" id="resemail"></p>
-        <!--<p class="result" id="resaccType"></p>-->
+        
+        <p class="result field_name">Account Type:</p>
         <select name="resaccType" id="resaccType">
 			<option value="NONE" selected>NONE</option>
 			<option value="REG">REG</option>
 			<option value="ADMIN">ADMIN</option>
 		</select>
-        <input type="submit" id="submit" value="Verify">
+        <input type="submit" id="submit" value="Accept">
+        <input type="submit" id="reject" value="Reject">
         </input>
     </form>
 

@@ -36,6 +36,7 @@ app.get('/success', successController.getSuccess);
 app.get('/home', homeController.getHome);
 app.get('/newAccounts', newAccountsController.getNewAccounts);
 app.post('/newAccounts', newAccountsController.postNewAccount);
+app.post('/deleteAccount', newAccountsController.deleteAccount);
 app.get('/allAccounts', allAccountsController.getAllAccounts);
 
 module.exports = app;
